@@ -1,0 +1,196 @@
+/*
+The CSS code gets to executed from top to bottom and left ro right
+Basic rules to write CSS
+- write GENERAL rules first (for all the paragraph tags in the website for example) and only after that write CSS for SPECIFIC tags (for example the paragraph tags inside the footer)
+- write the css styles to define for the parent (outside) container and THEN the children (inside containers) of that parent and THEN the children (inside containers) of the child above
+*/
+
+
+/* CSS reset
+(all the browsers will see the website in the same by setting every tag to 0 (the website will look the same on all browsers))
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+
+/* General styles (General Module, wrapping around the modules bellow)
+(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
+*/
+
+body {
+    border: 1px solid black;
+    width: 60%;
+    margin: 2rem auto 2rem auto;
+    background-color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    padding-right: 10rem;
+}
+
+h2 {
+    float: right;
+    font-size: 4rem;
+    padding-right: 6rem;
+}
+
+input {
+    text-align: center;
+    border: 1px solid black;
+}
+
+p {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+}
+
+button[type=submit] {
+    margin-top: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    margin-right: 3rem;
+}
+
+.submission,
+.resetting {
+    text-align: right;
+}
+
+
+/* Header styles (Main Module)
+(all the styles inside the < header > or < nav > tags)
+*/
+
+header {
+    border: 1px solid black;
+    vertical-align: top;
+}
+
+.header-content,
+.header-content-2 {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.header-content {
+    width: 20%;
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+.header-content-2 {
+    width: 79%;
+    text-align: right;
+}
+
+.ion-social-angular-outline {
+    color: red;
+}
+
+.word-selection {
+    display: inline-block;
+    width: 30%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* Content styles (Main Module)
+(all the styles inside the < sections > or < aside > tags)
+*/
+
+.word-inputs {
+    padding-top: 2rem;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+
+.word-inputs.ng-hide-add,
+.word-inputs.ng-hide-remove {
+    -webkit-transition: all linear 1s;
+    -moz-transition: all linear 1s;
+    -o-transition: all linear 1s;
+    transition: all linear 1s;
+    display: block!important;
+}
+
+.word-inputs.ng-hide-add.ng-hide-add-active,
+.word-inputs.ng-hide-remove {
+    opacity: 0;
+}
+
+.word-inputs.ng-hide-add,
+.word-inputs.ng-hide-remove.ng-hide-remove-active {
+    opacity: 1;
+}
+
+.word-selection input {
+    width: 99%;
+    margin-bottom: .7rem;
+}
+
+.gender-selection {
+    width: 99%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.hor-line {
+    height: 5px;
+    /* Line width */
+    background-color: black;
+    /* Line color */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.all-words {
+    margin: 0 auto;
+    height: 100%;
+}
+
+.generator {
+    margin-bottom: 2rem;
+}
+
+.madlib-content {
+    margin-top: 3rem;
+}
+
+
+/* Footer styles (Main Module)
+(all the styles inside the < footer > tag)
+*/
+
+footer {
+    margin-top: 10rem;
+}
+
+
+/*
+place all the desktop styles above this line
+Responsive styles
+(the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
+place all the mobile tables styles bellow this line
+*/
