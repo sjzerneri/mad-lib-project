@@ -16,12 +16,10 @@ app.controller('madLibsController', function ($scope) {
 
 
     $scope.submit = function () {
-        console.log('submit happened');
         $scope.hideForm = true;
     }
 
     $scope.startover = function () {
-        console.log('this happened');
         $scope.data = {};
         $scope.hideForm = false;
         $scope.submitted = false;
