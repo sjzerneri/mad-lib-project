@@ -125,8 +125,7 @@ header {
     text-align: center;
 }
 
-.word-inputs.ng-hide-add,
-.word-inputs.ng-hide-remove {
+.animate-hide {
     -webkit-transition: all linear 1s;
     -moz-transition: all linear 1s;
     -o-transition: all linear 1s;
@@ -134,13 +133,19 @@ header {
     display: block!important;
 }
 
-.word-inputs.ng-hide-add.ng-hide-add-active,
-.word-inputs.ng-hide-remove {
+.animate-hide.ng-hide {
     opacity: 0;
 }
 
-.word-inputs.ng-hide-add,
-.word-inputs.ng-hide-remove.ng-hide-remove-active {
+.animate-show {
+    -webkit-transition: all linear 1s;
+    -moz-transition: all linear 1s;
+    -o-transition: all linear 1s;
+    transition: all linear 1s;
+    display: block!important;
+}
+
+.animate-show.ng-show {
     opacity: 1;
 }
 
