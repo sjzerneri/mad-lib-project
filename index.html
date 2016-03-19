@@ -9,6 +9,7 @@
     <link href="css/styles.css" rel="stylesheet">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <script src="js/app.js"></script>
+    <script data-require="angular-messages@*" data-semver="1.4.0-beta.4" src="https://code.angularjs.org/1.4.0-beta.4/angular-messages.js"></script>
 </head>
 
 <body ng-controller="madLibsController">
@@ -25,27 +26,34 @@
     <section ng-hide="hideForm && myForm.$valid" class="word-inputs animate-hide">
         <h3> Provide The Following Words:</h3>
         <div class="all-words">
-            <form name="myForm" ng-submit="submitted=true;submit()">
+            <form name="myForm" ng-submit="submitted=true;submit()" novalidate>
                 <div class="word-selection">
-                    <input type="text" ng-model="name" placeholder="name" required>
-                    <input type="text" ng-model="jobtitle" placeholder="job title" required>
-                    <input type="text" ng-model="tedioustask" placeholder="tedious task" required>
-                </div>
-                <div class="word-selection">
-                    <input type="text" ng-model="dirtytask" placeholder="dirty task" required>
-                    <input type="text" ng-model="celebrity" placeholder="celebrity" required>
-                    <input type="text" ng-model="uselessskill" placeholder="useless skill" required>
+                    <input type="text" name="name" ng-model="name" placeholder="name" required>
+                    <input type="text" name="jobtitle" ng-model="jobtitle" placeholder="job title" required>
+                    <input type="text" name="tedioustask" ng-model="tedioustask" placeholder="tedious task" required>
                 </div>
                 <div class="word-selection">
-                    <input type="text" ng-model="obnoxiousceleb" placeholder="obnoxious celeb" required>
-                    <input type="number" ng-model="hugenumber" placeholder="huge number" required>
-                    <input type="text" ng-model="adjective" placeholder="adjective" required>
+                    <input type="text" name="dirtytask" ng-model="dirtytask" placeholder="dirty task" required>
+                    <input type="text" name="celebrity" ng-model="celebrity" placeholder="celebrity" required>
+                    <input type="text" name="uselessskill" ng-model="uselessskill" placeholder="useless skill" required>
                 </div>
-                <div class="hor-line"> </div>
-                <div class="submission">
-                    <button type="submit">Generate Mad Lib</button>
+                <div class="word-selection">
+                    <input type="text" name="obnoxiousceleb" ng-model="obnoxiousceleb" placeholder="obnoxious celeb" required>
+                    <input type="number" name="hugenumber" ng-model="hugenumber" placeholder="huge number" required>
+                    <input type="text" name="adjective" ng-model="adjective" placeholder="adjective" required>
                 </div>
-            </form>
+                <div class="errors">
+                    <div ng-messages="myForm.$error">
+                        <!-- the required message is displayed first... -->
+                        <div ng-message="required">You forgot to enter one or more of the fields...</div>
+                    </div>
+                </div>
+        </div>
+        <div class="hor-line"> </div>
+        <div class="submission">
+            <button type="submit">Generate Mad Lib</button>
+        </div>
+        </form>
         </div>
     </section>
 
