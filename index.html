@@ -8,6 +8,7 @@
     <title>Mad Libs</title>
     <link href="css/styles.css" rel="stylesheet">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Fjalla+One|Average' rel='stylesheet' type='text/css'>
     <script src="js/app.js"></script>
     <script data-require="angular-messages@*" data-semver="1.4.0-beta.4" src="https://code.angularjs.org/1.4.0-beta.4/angular-messages.js"></script>
 </head>
@@ -15,11 +16,7 @@
 <body ng-controller="madLibsController">
     <header>
         <div class="header-content">
-            <img class="smiley-logo" src="images/smiley.png">
-        </div>
-        <div class="header-content-2">
             <h1>ngMad <i class="ionicons ion-social-angular-outline"></i> libs</h1>
-            <h2> Automate This! </h2>
         </div>
     </header>
 
@@ -49,7 +46,6 @@
                     </div>
                 </div>
         </div>
-        <div class="hor-line"> </div>
         <div class="submission">
             <button type="submit">Generate Mad Lib</button>
         </div>
@@ -59,8 +55,9 @@
 
     <section class="madlib-text" ng-show="hideForm && myForm.$valid">
         <div class="madlib-content">
-            <p> <strong>{{name}}</strong> was a <strong>{{jobtitle}}</strong> who loved technology. Although {{ gender.pronoun }} loved parts of her job, {{ gender.pronoun }} absolutely hated <strong>{{tedioustask}}</strong> and <strong>{{dirtytask}}</strong>. So, <strong>{{malename}}</strong> met with {{ gender.poss }} life mentor <strong>{{celebrity}}</strong> who told {{ gender.poss }} to learn how to <strong>{{uselessskill}} </strong>with Thinkful. Thinkful didn't offer a course on <strong>{{uselessskill}}</strong> so {{ gender.pronoun }} studied programming instead.
-                <p>What a great decision! With {{ gender.poss }} new skills, <strong>{{name}}</strong> built a(n) <strong>{{adjective}}</strong> robot named <strong>{{obnoxiousceleb}} </strong>that not only loved <strong>{{dirtytask}} </strong>but did it <strong>{{hugenumber}}</strong> times faster. </p>
+            <h2> Here's Your Mad-Lib..Enjoy!</h2>
+            <p class="mad-lib-result"> <strong>{{name}}</strong> was a <strong>{{jobtitle}}</strong> who loved technology. Although {{ gender.pronoun }} loved parts of her job, {{ gender.pronoun }} absolutely hated <strong>{{tedioustask}}</strong> and <strong>{{dirtytask}}</strong>. So, <strong>{{malename}}</strong> met with {{ gender.poss }} life mentor <strong>{{celebrity}}</strong> who told {{ gender.poss }} to learn how to <strong>{{uselessskill}} </strong>with Thinkful. Thinkful didn't offer a course on <strong>{{uselessskill}}</strong> so {{ gender.pronoun }} studied programming instead.
+                <p class="mad-lib-result">What a great decision! With {{ gender.poss }} new skills, <strong>{{name}}</strong> built a(n) <strong>{{adjective}}</strong> robot named <strong>{{obnoxiousceleb}} </strong>that not only loved <strong>{{dirtytask}} </strong>but did it <strong>{{hugenumber}}</strong> times faster. </p>
             </p>
             <div class="resetting">
                 <button type="submit" ng-click="startover()">Start Over</button>

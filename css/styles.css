@@ -31,43 +31,64 @@ Basic rules to write CSS
 
 /* General styles (General Module, wrapping around the modules bellow)
 (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
+
+font-family: 'Fjalla One', sans-serif; font-family: 'Average', serif;
 */
 
 body {
-    border: 1px solid black;
-    width: 60%;
-    margin: 2rem auto 2rem auto;
     background-color: white;
+    background-color: #c9c9c9;
+    color: white;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     padding-right: 10rem;
+    font-family: 'Fjalla One'
 }
 
 h2 {
-    float: right;
+    margin: 0 auto;
+    text-align: center;
     font-size: 4rem;
     padding-right: 6rem;
+    font-family: 'Fjalla One';
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: 'Fjalla One';
 }
 
 input {
     text-align: center;
-    border: 1px solid black;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: white;
 }
 
 p {
-    width: 70%;
+    width: 50%;
+    text-align: center;
     margin: 0 auto;
     margin-bottom: 2rem;
     font-size: 1.3rem;
 }
 
 button[type=submit] {
-    margin-top: 3rem;
-    background-color: white;
-    border: 1px solid black;
+    font-family: 'Fjalla One';
+    margin-top: 4rem;
+    background-color: transparent;
+    padding: 2rem;
+    font-size: 1rem;
+    color: white;
+    border: 2px solid white;
     margin-right: 3rem;
+}
+
+button[type=submit]:hover {
+    background: #89bdd3;
 }
 
 .submission,
@@ -81,29 +102,28 @@ button[type=submit] {
 */
 
 header {
-    border: 1px solid black;
-    vertical-align: top;
-}
-
-.header-content,
-.header-content-2 {
-    display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
+    background-color: #89bdd3;
+    color: white;
+    height: 5rem;
 }
 
 .header-content {
-    width: 20%;
-    text-align: center;
-    margin-top: 1.2rem;
-}
-
-.header-content-2 {
+    padding-left: 3rem;
+    padding-top: .9rem;
     width: 79%;
-    text-align: right;
+    text-align: middle;
+    display: inline-block;
+    vertical-align: middle;
+    background:
 }
 
 .ion-social-angular-outline {
-    color: red;
+    color: white;
+}
+
+.mad-lib-result {
+    padding-top: 2rem;
 }
 
 .word-selection {
@@ -123,6 +143,7 @@ header {
     margin: 0 auto;
     width: 90%;
     text-align: center;
+    background-color: #c9c9c9;
 }
 
 
@@ -223,9 +244,15 @@ header {
     margin: 0 auto;
 }
 
+.errors {
+    color: indianred;
+}
+
 .all-words {
     margin: 0 auto;
     height: 100%;
+    font-family: 'Average', serif;
+    font-size: 1.1rem;
 }
 
 .generator {
@@ -243,6 +270,7 @@ header {
 
 footer {
     margin-top: 10rem;
+    margin-left: 2rem;
 }
 
 
