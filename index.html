@@ -39,8 +39,8 @@
                     <input type="number" name="hugenumber" ng-model="hugenumber" placeholder="huge number" required>
                     <input type="text" name="adjective" ng-model="adjective" placeholder="adjective" required>
                 </div>
-                <div class="errors">
-                    <div ng-messages="myForm.$error">
+                <div class="errors" ng-show="submitted">
+                    <div ng-messages="myForm.$error" ng-if='myForm.$dirty'>
                         <!-- the required message is displayed first... -->
                         <div ng-message="required">Oops! You forgot to enter all of the fields above!</div>
                     </div>
